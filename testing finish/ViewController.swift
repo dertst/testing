@@ -11,35 +11,51 @@ class ViewController: UIViewController {
 
     @IBOutlet var numTF: UITextField!
     @IBOutlet var passTF: UITextField!
+
     @IBOutlet var buton: UIButton!
     
-    var isValidNum=false
     var num: String = ""
     var pass: String = ""
+    var isValidNum = false
+    var isValidPass = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        buton.layer.cornerRadius = 5
+        buton.layer.cornerRadius = 4
+        buton.backgroundColor = .lightGray
     }
     
-    
     @IBAction func validNum() {
-        num=numTF.text ?? ""
+        num = numTF.text ?? ""
         if num.count >= 8 {
-            isValidNum=true
+           isValidNum=true
         }else{
             isValidNum=false
+            buton.backgroundColor = .lightGray
             buton.isEnabled=false
+        }
+        if isValidNum && isValidPass {
+            buton.isEnabled=true
+            buton.backgroundColor = .blue
         }
     }
     @IBAction func validPass() {
-        pass=passTF.text ?? ""
-        if pass.count >= 6 && isValidNum {
+        pass = passTF.text ?? ""
+        if pass.count >= 6 {
+            isValidPass=true
+        }
+        else{
+            isValidPass=false
+            buton.backgroundColor = .lightGray
+        }
+        if isValidNum && isValidPass {
             buton.isEnabled=true
-        }else{
+            buton.backgroundColor = .blue
             buton.isEnabled=false
         }
     }
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
