@@ -12,17 +12,18 @@ class ViewController: UIViewController {
     @IBOutlet var numTF: UITextField!
     @IBOutlet var passTF: UITextField!
 
-    @IBOutlet var buton: UIButton!
+
     
     var num: String = ""
     var pass: String = ""
     var isValidNum = false
     var isValidPass = false
     
+    @IBOutlet var buton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        buton.layer.cornerRadius = 4
-        buton.backgroundColor = .lightGray
+        buton?.layer.cornerRadius = 4
+        buton?.backgroundColor = .lightGray
     }
     
     @IBAction func validNum() {
@@ -51,7 +52,6 @@ class ViewController: UIViewController {
         if isValidNum && isValidPass {
             buton.isEnabled=true
             buton.backgroundColor = .blue
-            buton.isEnabled=false
         }
     }
     

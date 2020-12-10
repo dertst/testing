@@ -16,16 +16,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group" translatesAutoresizingMaskIntoConstraints="NO" id="u9l-JW-fPo">
-                                <rect key="frame" x="62" y="184" width="289" height="310"/>
+                                <rect key="frame" x="62" y="184" width="289" height="159"/>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="1d2-86-dee">
+                                <rect key="frame" x="171" y="705" width="71" height="20"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY" colorLabel="IBBuiltInLabel-Orange"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u9l-JW-fPo" secondAttribute="trailing" constant="63" id="5rb-a7-B9e"/>
-                            <constraint firstItem="u9l-JW-fPo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="140" id="J4q-Tc-RUb"/>
-                            <constraint firstItem="u9l-JW-fPo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="62" id="Qg2-1a-KWT"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="u9l-JW-fPo" secondAttribute="bottom" constant="368" id="ehw-Uo-wr8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1d2-86-dee" secondAttribute="trailing" constant="172" id="4mX-My-VUd"/>
+                            <constraint firstItem="u9l-JW-fPo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="62" id="6up-Gc-Dnl"/>
+                            <constraint firstItem="1d2-86-dee" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="171" id="ZwP-1y-2Z1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1d2-86-dee" secondAttribute="bottom" constant="137" id="gp4-u7-gXf"/>
+                            <constraint firstItem="u9l-JW-fPo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="140" id="ifU-g1-tIf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u9l-JW-fPo" secondAttribute="trailing" constant="63" id="mQx-yo-TdN"/>
                         </constraints>
                     </view>
                 </viewController>
